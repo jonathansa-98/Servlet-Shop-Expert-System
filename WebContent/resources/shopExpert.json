@@ -1,0 +1,148 @@
+{
+  "label": "null",
+  "question": "What type of clothing?",
+  "children": [
+    {
+      "label": "Jeans",
+      "question": "Color of jeans?",
+      "children": [
+        {
+          "label": "Blue",
+          "question": null,
+          "children": null
+        },
+        {
+          "label": "Black",
+          "question": null,
+          "children": null
+        },
+        {
+          "label": "White",
+          "question": null,
+          "children": null
+        }
+      ]
+    },
+    {
+      "label": "Shirt",
+      "question": "Type of shirt?",
+      "children": [
+        {
+          "label": "T-Shirt",
+          "question": "Color of T-shirt?",
+          "children": [
+            {
+              "label": "Red",
+              "question": null,
+              "children": null
+            },
+            {
+              "label": "Green",
+              "question": null,
+              "children": null
+            },
+            {
+              "label": "Black",
+              "question": "Logo?",
+              "children": [
+                {
+                  "label": "Rock band",
+                  "question": null,
+                  "children": null
+                },
+                {
+                  "label": "TV show",
+                  "question": null,
+                  "children": null
+                },
+                {
+                  "label": "No logo",
+                  "question": null,
+                  "children": null
+                }
+              ]
+            },
+            {
+              "label": "Orange",
+              "question": null,
+              "children": null
+            }
+          ]
+        },
+        {
+          "label": "Hoodie",
+          "question": "Color of hoodie?",
+          "children": [
+            {
+              "label": "Gray",
+              "question": null,
+              "children": null
+            },
+            {
+              "label": "Blue",
+              "question": null,
+              "children": [
+                {
+                  "label": "TV show",
+                  "question": null,
+                  "children": null
+                },
+                {
+                  "label": "No logo",
+                  "question": null,
+                  "children": null
+                }
+              ]
+            },
+            {
+              "label": "Green",
+              "question": null,
+              "children": null
+            },
+            {
+              "label": "Pink",
+              "question": null,
+              "children": null
+            },
+            {
+              "label": "Brown",
+              "question": null,
+              "children": null
+            },
+            {
+              "label": "Black",
+              "question": null,
+              "children": null
+            },
+            {
+              "label": "Red",
+              "question": null,
+              "children": null
+            }
+          ]
+        },
+        {
+          "label": "White",
+          "question": null,
+          "children": null
+        }
+      ]
+    },
+    {
+      "label": "Hat",
+      "question": "Type of hat?",
+      "children": [
+        {
+          "label": "Stetson",
+          "question": null,
+          "children": null
+        },
+        {
+          "label": "Sombrero",
+          "question": null,
+          "children": null
+        }
+      ]
+    }
+  ]
+}
