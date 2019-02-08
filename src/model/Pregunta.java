@@ -78,6 +78,13 @@ public class Pregunta {
 	
 	public Pregunta parseFromAnswer(String answer) {
 		// parsing file "shopExpert.json"
+		int index;
+		try {
+			Integer ans = Integer.parseInt(answer);
+			index = ans.intValue();
+		} catch (NumberFormatException e) {
+			System.out.println(e.getMessage()+e);
+		}		
 		Pregunta pregunta = new Pregunta();
 		BufferedReader reader = null;
 		List<Pregunta> respostas = new ArrayList<Pregunta>();

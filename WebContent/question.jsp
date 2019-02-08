@@ -20,19 +20,31 @@
 	<h1 align="center">Shop expert system</h1>
 	<form method="POST" action="SelectShop" accept-charset=utf-8>
 	<% Pregunta question = (Pregunta) request.getAttribute("pregunta"); %>
-		<p><% out.print(question.getQuestion()); %></p>
-		<p><% out.print(question.getChildren().size()); %></p>
-		<p><% out.print(question.getLabel()); %></p>
+		<p>Question: <% out.print(question.getQuestion()); %></p>
+		<p>Answers: <% out.print(question.getChildren().size()); %></p>
+		<p>Label: <% out.print(question.getLabel()); %></p>
 		<select name="answer" required>
 			<% 
 				Iterator<Pregunta> answers = question.getChildren().iterator();
+				int i = 0;
 				while(answers.hasNext()) {
 					String label = answers.next().getLabel();
-					out.print("<option value='"+label+"'>"+label+"</option>");
+					out.print("<option value='"+i+"'>"+label+"</option>");
+					i++;
 				}
 			%>
 		</select>
-		<br><br>
+		<br>
+		<%
+			session.setAttribute("pregunta", question);
+      		Pregunta p = (Pregunta)session.getAttribute("pregunta");
+      		out.print(session.getId());
+      	%>
+      	<br>
+      	<%
+      		out.print(p.getQuestion()); 
+      	%>
+      	<br>
 		<input type="submit" value="Answer">
 	</form>
 </body>
