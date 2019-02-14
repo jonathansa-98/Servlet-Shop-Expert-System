@@ -38,23 +38,27 @@ public class ShopSelect extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Pregunta pregunta = new Pregunta();
 		if (request.getParameterMap().containsKey("answer")) {
-			String answer = request.getParameter("answer");
+			// treat the next question
 			HttpSession session = request.getSession();
-			System.out.println(session.getId()+"\n");
+			// get the answer pos [0,1,2...].
+			String answer = request.getParameter("answer");
+			// get the actual question
 			Pregunta next = (Pregunta)session.getAttribute("pregunta");
-            //pregunta = pregunta.parseFromAnswer(answer);
-			//pregunta = pregunta.parseFromAnswer(answer);
-            System.out.println(next+"\n");
-            System.out.println(next.getLabel()+"\n");
+			// System.out.println(session.getId()+"\n");
+            pregunta = next.parseFromAnswer(answer);
+            //System.out.println(next+"\n");
+            System.out.println(pregunta.getQuestion()+"\n");
 		} else {
+			// 1st time
     		pregunta = pregunta.parsePrimeraPregunta();
 		}
-		if(pregunta.getQuestion()=="null") {
-			System.out.print("hola");
-			request.setAttribute("answer", "hola");
-			RequestDispatcher view = request.getRequestDispatcher("question.jsp");
+		if(pregunta.getChildren()==null) {
+			// finds a definitive answer.
+			request.setAttribute("pregunta", pregunta);
+			RequestDispatcher view = request.getRequestDispatcher("result.jsp");
 			view.forward(request, response);
 		} else {
+			// keep asking
 			request.setAttribute("pregunta", pregunta);
 			RequestDispatcher view = request.getRequestDispatcher("question.jsp");
 			view.forward(request, response);

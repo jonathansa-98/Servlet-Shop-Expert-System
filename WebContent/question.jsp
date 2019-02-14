@@ -20,9 +20,9 @@
 	<h1 align="center">Shop expert system</h1>
 	<form method="POST" action="SelectShop" accept-charset=utf-8>
 	<% Pregunta question = (Pregunta) request.getAttribute("pregunta"); %>
-		<p>Question: <% out.print(question.getQuestion()); %></p>
-		<p>Answers: <% out.print(question.getChildren().size()); %></p>
-		<p>Label: <% out.print(question.getLabel()); %></p>
+		<p>Question: 	<%=question.getQuestion()		%></p>
+		<p>Answers: 	<%=question.getChildren().size()%></p>
+		<p>Label: 		<%=question.getLabel()			%></p>
 		<select name="answer" required>
 			<% 
 				Iterator<Pregunta> answers = question.getChildren().iterator();
@@ -36,15 +36,13 @@
 		</select>
 		<br>
 		<%
+			session = request.getSession(true);
 			session.setAttribute("pregunta", question);
       		Pregunta p = (Pregunta)session.getAttribute("pregunta");
       		out.print(session.getId());
       	%>
       	<br>
-      	<%
-      		out.print(p.getQuestion()); 
-      	%>
-      	<br>
+      	<p><%=p.getQuestion()%></p>
 		<input type="submit" value="Answer">
 	</form>
 </body>
