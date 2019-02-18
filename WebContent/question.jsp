@@ -10,6 +10,7 @@
 	<meta charset="utf-8">
 	<title>Insert title here</title>
 	<style type="text/css">
+		*{font-size: 30px;}
 		body{
 			margin-left: 5em;
 			margin-right: 5em;
@@ -34,15 +35,10 @@
 				}
 			%>
 		</select>
-		<br>
 		<%
 			session = request.getSession(true);
 			session.setAttribute("pregunta", question);
-      		Pregunta p = (Pregunta)session.getAttribute("pregunta");
-      		out.print(session.getId());
       	%>
-      	<br>
-      	<p><%=p.getQuestion()%></p>
 		<input type="submit" value="Answer">
 	</form>
 </body>

@@ -8,17 +8,17 @@
   	    "children": [
         {
         	"label": "Blue",
-          	"question": null,
+          	"question": "Blue jeans",
           	"children": null
         },
         {
           	"label": "Black",
-          	"question": null,
+          	"question": "Black jeans",
           	"children": null
         },
         {
           	"label": "White",
-          	"question": null,
+          	"question": "White jeans",
           	"children": null
         }
       ]
@@ -33,12 +33,12 @@
           	"children": [
             {
               	"label": "Red",
-              	"question": null,
+              	"question": "Red T-Shirt",
               	"children": null
             },
             {
               	"label": "Green",
-              	"question": null,
+              	"question": "Green T-Shirt",
               	"children": null
             },
             {
@@ -47,24 +47,24 @@
               	"children": [
                 {
                   	"label": "Rock",
-                  	"question": null,
+                  	"question": "Black T-Shirt with Rock logo",
                   	"children": null
                 },
                 {
                   	"label": "TV show",
-                  	"question": null,
+                  	"question": "Black T-Shirt with TV show logo",
                   	"children": null
                 },
                 {
                   	"label": "No logo",
-                  	"question": null,
+                  	"question": "Black T-Shirt without logo",
                   	"children": null
                 }
               ]
             },
             {
               	"label": "Orange",
-              	"question": null,
+              	"question": "Orange T-Shirt",
               	"children": null
             }
           ]
@@ -75,7 +75,7 @@
           	"children": [
             {
               	"label": "Gray",
-              	"question": null,
+              	"question": "Gray Hoodie",
               	"children": null
             },
             {
@@ -84,46 +84,46 @@
               	"children": [
                 {
                   	"label": "TV show",
-                  	"question": null,
+                  	"question": "Blue Hoodie with TV show logo",
                   	"children": null
                 },
                 {
                   	"label": "No logo",
-                  	"question": null,
+                  	"question": "Blue Hoodie without logo",
                   	"children": null
                 }
               ]
             },
             {
               	"label": "Green",
-              	"question": null,
+              	"question": "Green Hoodie",
               	"children": null
             },
             {
               	"label": "Pink",
-              	"question": null,
+              	"question": "Pink Hoodie",
               	"children": null
             },
             {
               	"label": "Brown",
-              	"question": null,
+              	"question": "Brown Hoodie",
               	"children": null
             },
             {
               	"label": "Black",
-              	"question": null,
+              	"question": "Black Hoodie",
               	"children": null
             },
             {
               	"label": "Red",
-              	"question": null,
+              	"question": "Red Hoodie",
               	"children": null
             }
           ]
         },
         {
           	"label": "White",
-          	"question": null,
+          	"question": "",
           	"children": null
         }
       ]
@@ -134,12 +134,12 @@
       	"children": [
         {
           	"label": "Stetson",
-          	"question": null,
+          	"question": "Stetson Hat",
           	"children": null
         },
         {
           	"label": "Sombrero",
-          	"question": null,
+          	"question": "Sombrero Hat",
           	"children": null
         }
       ]

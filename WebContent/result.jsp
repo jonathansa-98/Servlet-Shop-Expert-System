@@ -8,8 +8,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>You would love the </h1>
-		<% Pregunta question = (Pregunta) request.getAttribute("pregunta"); %>
-		<p>Label: 		<%=question.getLabel()			%></p>
+	<h1>You would love the ${pregunta.question}</h1>
 </body>
 </html>
