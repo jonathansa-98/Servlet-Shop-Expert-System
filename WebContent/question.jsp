@@ -23,7 +23,10 @@
 	<% Pregunta question = (Pregunta) request.getAttribute("pregunta"); %>
 		<p>Question: 	<%=question.getQuestion()		%></p>
 		<p>Answers: 	<%=question.getChildren().size()%></p>
-		<p>Label: 		<%=question.getLabel()			%></p>
+		<% if(question.getLabel()!=null) {
+			out.print("<p>Label: "+question.getLabel()+"</p>");
+		}
+		%>
 		<select name="answer" required>
 			<% 
 				Iterator<Pregunta> answers = question.getChildren().iterator();
@@ -33,12 +36,10 @@
 					out.print("<option value='"+i+"'>"+label+"</option>");
 					i++;
 				}
+				session = request.getSession(true);
+				session.setAttribute("pregunta", question);
 			%>
 		</select>
-		<%
-			session = request.getSession(true);
-			session.setAttribute("pregunta", question);
-      	%>
 		<input type="submit" value="Answer">
 	</form>
 </body>
